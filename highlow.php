@@ -1,6 +1,7 @@
 <?php
-if ($argc == 3) {
-    $randomNumber = rand($argv[2], $argv[3]);
+if (is_numeric($argv[1]) and $argc == 3 and is_numeric($argv[2])) {
+    
+    $randomNumber = rand($argv[1], $argv[2]);
 } else {
     echo "Error: input two numbers after calling program. Ex: highlow.php 1 100 (will give you a min number of 1 and max of 100)" . PHP_EOL;
     exit(0);
